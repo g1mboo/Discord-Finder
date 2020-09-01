@@ -14,7 +14,7 @@ namespace SrchBot
     {        
         static void Main(string[] args)
         {
-            Bot bot = new Bot(@"config.xml", "token");
+            Bot bot = new Bot(@"config.xml", "there should be your bot token");
             bot.ActivateBot().GetAwaiter().GetResult();
         }
     }
