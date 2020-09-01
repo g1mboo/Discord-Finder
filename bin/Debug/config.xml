@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <MessageTrigger>+</MessageTrigger>
+  <CommandPrefix>!</CommandPrefix>
+  <StartPhrase>Отправляйте свои</StartPhrase>
+  <PromptsParam>true</PromptsParam>
+</Configuration>
