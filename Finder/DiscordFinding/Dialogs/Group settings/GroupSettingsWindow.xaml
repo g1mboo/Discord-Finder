@@ -1,0 +1,203 @@
+﻿<Window x:Class="DiscordFinding.Dialogs.Group_settings.GroupSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:DiscordFinding.Dialogs.Group_settings"
+        mc:Ignorable="d"
+        Title="Группы" Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        fw:AcrylicWindow.Enabled="True"        
+        fw:AcrylicWindow.AcrylicWindowStyle="NoIcon"
+        fw:AcrylicWindow.NoiseOpacity="0"
+        BorderBrush="Transparent"
+        Background="{DynamicResource SystemAltHighColorBrush}"
+        Foreground="{DynamicResource SystemBaseMediumHighColorBrush}" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="FieldInfo">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Margin" Value="10 5"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="{DynamicResource SystemBaseMediumColorBrush}"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="ContentBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Margin" Value="0 10"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>        
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" 
+              Margin="20 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <materialDesign:PackIcon Grid.Row="0"
+                                     Kind="UsersGroup"
+                                     Margin="10"
+                                     HorizontalAlignment="Center"  
+                                     Width="100" 
+                                     Height="100"
+                                     Foreground="{DynamicResource SystemBaseHighColorBrush}"/>
+            <Grid Grid.Row="1"
+                  Background="{DynamicResource SystemBaseHighColorBrush}">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="GROUP" 
+                               FontWeight="Bold" 
+                               FontSize="30"
+                               Foreground="{DynamicResource SystemAltHighColorBrush}" HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="SETTINGS" 
+                               HorizontalAlignment="Center" 
+                               FontWeight="Bold" 
+                               FontSize="22"
+                               Foreground="{DynamicResource SystemAltHighColorBrush}"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="2"
+                        Background="{DynamicResource SystemBaseMediumHighColorBrush}"/>
+            <StackPanel Grid.Row="3"
+                        Background="{DynamicResource SystemBaseMediumColorBrush}"/>
+            <StackPanel Grid.Row="4"
+                        Background="{DynamicResource SystemBaseMediumLowColorBrush}"/>
+            <StackPanel Grid.Row="5"
+                        Background="{DynamicResource SystemBaseLowColorBrush}"/>
+        </Grid>        
+        <Grid Grid.Column="1" 
+            Margin="10 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock Style="{StaticResource ContentBlock}">Группы</TextBlock>
+                <Grid Margin="10 0 20 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>                    
+                    </Grid.ColumnDefinitions>                    
+                    <ComboBox x:Name="groupsNameComboBox"
+                              Grid.Column="0"
+                              Style="{StaticResource GroupsComboBox}" 
+                              DropDownClosed="GroupNameComboBox_DropDownClosed"/>
+                    <Button Grid.Column="1"
+                            Content="Изменить" 
+                            Style="{StaticResource ButtonRoundRevealStyle}" 
+                            Height="30"
+                            Width="80" 
+                            Margin="10 0 6 0" 
+                            Click="EditGroupButton_Click"/>
+                    <Button Grid.Column="2"
+                            Content="Добавить" 
+                            Style="{StaticResource ButtonRoundRevealStyle}" 
+                            Height="30"
+                            Width="80" 
+                            Margin="10 0 6 0" 
+                            Click="AddGroupButton_Click"/>
+                    <Button Grid.Column="3"
+                            Content="Удалить" 
+                            Style="{StaticResource ButtonRoundRevealStyle}" 
+                            Height="30"
+                            Width="80" 
+                            Margin="10 0 6 0" 
+                            Click="RemoveGroupButton_Click"/>                    
+                </Grid>
+            </StackPanel>
+            
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>                
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"                               
+                               Style="{StaticResource ContentBlock}">Участники</TextBlock>
+                    <StackPanel Grid.Column="1"
+                                Margin="20 0"
+                                Orientation="Horizontal">                        
+                        <Button Style="{StaticResource ButtonRoundRevealStyle}" 
+                                Height="30" 
+                                Width="30" 
+                                Margin="10 10 5 10"
+                                Click="AddStudentsButton_Click">
+                            <materialDesign:PackIcon Kind="Add" Foreground="{DynamicResource SystemBaseHighColorBrush}"/>
+                        </Button>
+                        <Button Style="{StaticResource ButtonRoundRevealStyle}" 
+                                Height="30"
+                                Width="30"
+                                Margin="10"
+                                Click="RemoveStudentsButton_Click">
+                            <materialDesign:PackIcon Kind="Delete" Foreground="{DynamicResource SystemBaseHighColorBrush}"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <ScrollViewer Grid.Row="2" 
+                              VerticalScrollBarVisibility="Hidden">
+                    <StackPanel x:Name="studentsEditPanel" Margin="40 20"/>
+                </ScrollViewer>
+            </Grid> 
+            
+            <Grid x:Name="footer"
+                  Grid.Row="3"
+                  Margin="0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Сбросить изменения" 
+                        Style="{StaticResource ButtonAccentRevealStyle}" 
+                        Height="30"
+                        Width="140" 
+                        Margin="0 0 6 0" 
+                        Click="ResetChangesButton_Click"/>
+                
+                <TextBlock x:Name="validationField"
+                           Grid.Column="1" 
+                           Style="{DynamicResource ValidationField}"/>
+                
+                <StackPanel Grid.Column="2"
+                            Orientation="Horizontal">                    
+                    <Button Content="Сохранить" 
+                            Style="{StaticResource ButtonAccentRevealStyle}" 
+                            Height="30"
+                            Width="80" 
+                            Margin="10 0 6 0" 
+                            Click="SaveChangesButton_Click"/>
+
+                    <Button Content="Закрыть" 
+                            Style="{StaticResource ButtonAccentRevealStyle}" 
+                            Height="30" Width="80" 
+                            Margin="6 0 10 0" 
+                            Click="CloseWindowButton_Click" VerticalAlignment="Top"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+
+
