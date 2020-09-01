@@ -1,0 +1,4 @@
+﻿[*.{cs,vb}]
+
+# IDE0003: Удалить квалификацию
+dotnet_style_qualification_for_field = true:silent

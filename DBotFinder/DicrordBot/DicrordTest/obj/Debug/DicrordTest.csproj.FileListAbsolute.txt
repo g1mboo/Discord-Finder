@@ -1,0 +1,12 @@
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\DicrordTest.exe.config
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\DicrordTest.exe
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\DicrordTest.pdb
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\DSharpPlus.dll
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\DSharpPlus.xml
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\obj\Debug\DicrordTest.csprojAssemblyReference.cache
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\obj\Debug\DicrordTest.csproj.CoreCompileInputs.cache
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\obj\Debug\DicrordTest.csproj.CopyComplete
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\obj\Debug\DicrordTest.exe
+C:\Users\g1mboo\source\repos\DicrordTest\DicrordTest\obj\Debug\DicrordTest.pdb
