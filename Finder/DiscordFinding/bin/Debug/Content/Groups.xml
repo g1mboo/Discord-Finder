@@ -1,79 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Groups>
-  <Group name="C#192">
+  <Group name="C#TEST">
+  <!--Тут должны быть ученики-->
     <Student>
-      <SecondName>Артёмов</SecondName>
-      <Name>Дмитрий</Name>
-    </Student>
-    <Student>
-      <SecondName>Бейсенов</SecondName>
-      <Name>Саржан</Name>
-    </Student>
-    <Student>
-      <SecondName>Бисултанов</SecondName>
-      <Name>Абдуллах</Name>
-    </Student>
-    <Student>
-      <SecondName>Губер</SecondName>
-      <Name>Вадим</Name>
-    </Student>
-    <Student>
-      <SecondName>Дудкин</SecondName>
-      <Name>Александр</Name>
-    </Student>
-    <Student>
-      <SecondName>Емишов</SecondName>
-      <Name>Жангир</Name>
-    </Student>
-    <Student>
-      <SecondName>Ескендир</SecondName>
-      <Name>Османбей</Name>
-    </Student>
-    <Student>
-      <SecondName>Кенжебаев</SecondName>
-      <Name>Ерхан</Name>
-    </Student>
-    <Student>
-      <SecondName>Ким</SecondName>
-      <Name>Николай</Name>
-    </Student>
-    <Student>
-      <SecondName>Королев</SecondName>
-      <Name>Валерий</Name>
-    </Student>
-    <Student>
-      <SecondName>Михальчук</SecondName>
-      <Name>Александр</Name>
-    </Student>
-    <Student>
-      <SecondName>Молчанов</SecondName>
-      <Name>Владимир</Name>
-    </Student>
-    <Student>
-      <SecondName>Осипов</SecondName>
-      <Name>Артём</Name>
-    </Student>
-    <Student>
-      <SecondName>Такенов</SecondName>
-      <Name>Хаккназар</Name>
-    </Student>
-    <Student>
-      <SecondName>Татариков</SecondName>
-      <Name>Николай</Name>
-    </Student>
-    <Student>
-      <SecondName>Тюрин</SecondName>
-      <Name>Максим</Name>
-    </Student>
-    <Student>
-      <SecondName>Штыхлин</SecondName>
-      <Name>Евгений</Name>
+      <SecondName>TestUser</SecondName>
+      <Name>TestUser</Name>
     </Student>
   </Group>
   <Group name="VB.NET">
     <Student>
-      <SecondName>Fofov</SecondName>
-      <Name>Alexander</Name>
+      <SecondName>TestUser</SecondName>
+      <Name>TestUser</Name>
     </Student>
   </Group>
 </Groups>
