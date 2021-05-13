@@ -1,2 +1,2 @@
 # Discord-Finder
-Программа позволяющая отслеживать учеников в discord
+The first app created by Alexander Dudkin. 
